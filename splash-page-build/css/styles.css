@@ -1,6 +1,7 @@
 body {
   font-family: 'Source Sans Pro', sans-serif;
   color: #404040;
+  margin: 0;
 }
 
 /* =================
@@ -37,6 +38,11 @@ Challenge: Style the .intro section
 .intro { 
   color: #fff;
   background-color: #9480e4;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 250px;
 }
 
 /* ====================
