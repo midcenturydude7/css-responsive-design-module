@@ -1,3 +1,7 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
 body {
   font-family: 'Source Sans Pro', sans-serif;
   color: #404040;
@@ -39,6 +43,17 @@ p {
   text-transform: uppercase;
 }
 
+.top-text {
+  font-size: 0.875rem;
+  font-weight: 900;
+  padding-top: 0.25em;
+  border-top: 5px solid;
+  order: -1;
+  width: 157px;
+  margin: 0 auto;
+
+}
+
 .fine-print {
   font-size: 0.75rem;
   letter-spacing: 1px;
@@ -65,6 +80,8 @@ p {
   text-align: center;
   min-height: 250px;
   position: relative;
+  justify-content: space-between;
+  padding-bottom: 1.5em;
 }
 
 .intro::before {
@@ -92,6 +109,13 @@ p {
   width: 120px;
   border-radius: 50%;
 }
+
+.main-content p,
+form {
+  max-width: 600px;
+  text-align: justify;
+}
+
 /* =================
   Form
  ================= */
