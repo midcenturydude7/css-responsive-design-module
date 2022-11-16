@@ -39,6 +39,12 @@ p {
   text-transform: uppercase;
 }
 
+.fine-print {
+  font-size: 0.75rem;
+  letter-spacing: 1px;
+  color: #858585;
+}
+
 /* =================
   Flex containers
  ================= */
@@ -47,27 +53,31 @@ p {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  padding: 0 2em;
 }
 
 /* =================
   Intro
  ================= */
-
-/* 
-Challenge: Style the .intro section
-  - Convert into a flex container; 
-    display its content in a column
-  - Set a minimum height of 250px
-  - Center-align its content
-  - Vertically center the content
-  - Remove the space around the edges of the page
-*/
-
 .intro { 
   color: #fff;
   background-color: #9480e4;
   text-align: center;
   min-height: 250px;
+  position: relative;
+}
+
+.intro::before {
+  content: "";
+  background: #9480e4 url("../img/bg-image2.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+  opacity: 0.25;
 }
 
 /* ====================
@@ -75,7 +85,7 @@ Challenge: Style the .intro section
  ==================== */
 .main-content {
   align-items: center;
-  padding: 2.5em 2em 0;
+  padding-top: 2.5em;
 }
 
 .img-main {
@@ -85,7 +95,22 @@ Challenge: Style the .intro section
 /* =================
   Form
  ================= */
- 
+ form {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+ }
+
+ input {
+  margin-bottom: 0.75em;
+  padding: 0.5em;
+  border: 2px solid #d1d5db;
+ }
+
+ .btn {
+  width: 15%;
+  padding: 0.25em;
+ }
 
 /* =================
   Media queries 
@@ -94,11 +119,26 @@ Challenge: Style the .intro section
   .container {
     display: flex;
     min-height: 100vh;
-    /* width: 100% */
   }
 
   .intro, 
   .main-content {
     width: 50%;
+  }
+
+  .main-content {
+    padding-top: 0;
+  }
+
+  h1 {
+    font-size: 5vw;
+  }
+
+  h2 {
+    font-size: 2.625rem;
+  }
+
+  .beta-text {
+    font-size: 1.25rem;
   }
  }
