@@ -101,15 +101,39 @@ p {
   width: 100%;
  }
 
- input {
+ input,
+ button {
+  font-family: inherit;
   margin-bottom: 0.75em;
   padding: 0.5em;
   border: 2px solid #d1d5db;
+  border-radius: 5px;
+ }
+
+ input:focus {
+  outline: none;
+  border-color: #8a71ec;
+  background-color: #e6e8ec;
  }
 
  .btn {
-  width: 15%;
-  padding: 0.25em;
+  padding: 1em 0;
+  text-transform: uppercase;
+  font-weight: bold;
+  letter-spacing: 0.1em;
+  border: none;
+  cursor: pointer;
+ }
+
+ .btn-primary {
+  color: white;
+  background-color:#8a71ec;
+  margin-top: 1em;
+ }
+
+ .btn-primary:hover,
+ .btn-primary:focus {
+  background-color: #b7a7f6;
  }
 
 /* =================
