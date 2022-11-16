@@ -22,6 +22,15 @@ h1 {
 }
 
 /* =================
+  Flex containers
+ ================= */
+.intro, 
+.main-content {
+  display: flex;
+  flex-direction: column;
+}
+
+/* =================
   Intro
  ================= */
 
@@ -38,8 +47,6 @@ Challenge: Style the .intro section
 .intro { 
   color: #fff;
   background-color: #9480e4;
-  display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
   min-height: 250px;
@@ -48,8 +55,15 @@ Challenge: Style the .intro section
 /* ====================
   Main content
  ==================== */
+.main-content {
+  align-items: center;
+  padding: 2.5em 2em 0;
+}
 
-
+.img-main {
+  width: 120px;
+  border-radius: 50%;
+}
 /* =================
   Form
  ================= */
